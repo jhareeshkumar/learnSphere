@@ -66,6 +66,4 @@ public class Course {
 		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", coursePrice=" + coursePrice
 				+ ", lessons=" + lessons + "]";
 	}
-
-	
 }

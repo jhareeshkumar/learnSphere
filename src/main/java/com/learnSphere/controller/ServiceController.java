@@ -34,8 +34,12 @@ public class ServiceController {
 		// TODO: process POST request
 		if (userService.checkEmail(email)) {
 			if (userService.valid(email, password)) {
-				return "home";
-			}else {
+				String userRole = userService.getUserRole(email);
+				if (userRole.equals("trainer"))
+					return "trainerHome";
+				else
+					return "studentHome";
+			} else {
 				model.addAttribute("loginErrorMessage", "Incorrect Credentials");
 				return "login";
 			}

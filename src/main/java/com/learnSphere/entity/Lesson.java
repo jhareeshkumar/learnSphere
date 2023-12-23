@@ -74,6 +74,4 @@ public class Lesson {
 		return "Lesson [lessonId=" + lessonId + ", lessonName=" + lessonName + ", topics=" + topics + ", link=" + link
 				+ ", course=" + course + "]";
 	}
-	
-	
 }
