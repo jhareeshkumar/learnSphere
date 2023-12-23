@@ -2,6 +2,7 @@ package com.learnSphere.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class NavController {
@@ -20,11 +21,6 @@ public class NavController {
 		return "login";
 	}
 
-	@GetMapping("/home")
-	public String home() {
-		return "home";
-	}
-
 	@GetMapping("/createCourse")
 	public String createCourse() {
 		return "createCourse";
@@ -33,6 +29,31 @@ public class NavController {
 	@GetMapping("/addLesson")
 	public String addLesson() {
 		return "addLesson";
+	}
+
+	@GetMapping("/trainerHome")
+	public String trainerHome() {
+		return "trainerHome";
+	}
+
+	@GetMapping("/studentHome")
+	public String studentHome() {
+		return "studentHome";
+	}
+
+	@GetMapping("/courses")
+	public String courses() {
+		return "courses";
+	}
+
+	@GetMapping("/myCourses")
+	public String myCourses() {
+		return "myCourses";
+	}
+
+	@GetMapping("/purchase")
+	public String purchase() {
+		return "purchase";
 	}
 
 }
