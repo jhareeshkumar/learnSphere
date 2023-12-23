@@ -46,4 +46,11 @@ public class UserServiceImplementation implements UserService {
 		}
 	}
 
+	@Override
+	public String getUserRole(String email) {
+		// TODO Auto-generated method stub
+		Users user = userRepository.findByEmail(email);
+		return user.getRole();
+	}
+
 }
