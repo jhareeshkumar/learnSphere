@@ -6,12 +6,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.learnSphere.services.CommentsService;
 import com.learnSphere.services.UserService;
 
 @Controller
 public class ServiceController {
 	@Autowired
 	UserService userService;
+	@Autowired
+	CommentsService commentsService;
 
 	@PostMapping("/register")
 	public String addUser(@RequestParam String name, @RequestParam String email, @RequestParam String password,
@@ -47,5 +50,4 @@ public class ServiceController {
 		model.addAttribute("loginErrorMessage", "User not registered, Please register!.");
 		return "login";
 	}
-
 }

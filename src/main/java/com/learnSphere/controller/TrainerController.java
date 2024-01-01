@@ -24,7 +24,7 @@ public class TrainerController {
 		String course = trainerService.createCourse(courseId, courseName, coursePrice);
 		model.addAttribute("createCourseStatus", course);
 		System.out.println(courseId + "" + courseName + "" + coursePrice);
-		return "createCourse";
+		return "redirect:/createCourse";
 	}
 
 	@PostMapping("/addLesson")
@@ -35,7 +35,7 @@ public class TrainerController {
 		// TODO: process POST request
 		String addLessonStatus = trainerService.addLesson(courseId, lessonId, lessonName, lessonTopics, link);
 		model.addAttribute("addLessonStatus", addLessonStatus);
-		return "addLesson";
+		return "redirect:/addLesson";
 	}
 
 	@GetMapping("/showCourses")
