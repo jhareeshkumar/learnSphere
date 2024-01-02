@@ -15,7 +15,7 @@ import com.learnSphere.services.TrainerService;
 @Controller
 public class TrainerController {
 	@Autowired
-	TrainerService trainerService;
+	private TrainerService trainerService;
 
 	@PostMapping("/createCourse")
 	public String createCourse(@RequestParam int courseId, @RequestParam String courseName,
@@ -43,6 +43,6 @@ public class TrainerController {
 		List<Course> courseList = trainerService.courseList();
 		model.addAttribute("courses", courseList);
 		System.out.println("course fetched successfully");
-		return "courses";
+		return "redirect:/courses";
 	}
 }

@@ -9,8 +9,8 @@ import jakarta.persistence.Id;
 public class Comments {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	int commentId;
-	String comment;
+	private int commentId;
+	private String comment;
 
 	public Comments() {
 		super();

@@ -11,7 +11,7 @@ import com.learnSphere.repository.CommentsRepository;
 @Service
 public class CommentsServiceImplementation implements CommentsService {
 	@Autowired
-	CommentsRepository commentsRepository;
+	private CommentsRepository commentsRepository;
 
 	@Override
 	public List<Comments> commentsList() {

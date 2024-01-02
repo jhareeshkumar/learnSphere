@@ -9,9 +9,9 @@ import jakarta.persistence.OneToMany;
 @Entity
 public class Course {
 	@Id
-	int courseId;
-	String courseName;
-	int coursePrice;
+	private int courseId;
+	private String courseName;
+	private int coursePrice;
 
 	@OneToMany
 	List<Lesson> lessons;

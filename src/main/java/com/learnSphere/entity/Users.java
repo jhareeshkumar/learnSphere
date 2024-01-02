@@ -10,10 +10,10 @@ public class Users {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
-	String name;
-	String email;
-	String password;
-	String role;
+	private String name;
+	private String email;
+	private String password;
+	private String role;
 
 	public Users() {
 		super();

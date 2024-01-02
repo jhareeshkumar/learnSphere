@@ -9,21 +9,47 @@
 	rel="stylesheet"
 	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
 	crossorigin="anonymous">
-<style>
-body {
-	margin: 30px;
-}
-</style>
+<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
 </head>
+
 <body>
-	<div>
-		<h1 class="display-2">Trainer Home Page!</h1>
-	</div>
+
+	<header>
+		<nav class="navbar navbar-expand-lg mb-2 navbar-dark bg-dark">
+
+			<div class="container-fluid fw-bold">
+				<a class="navbar-brand" href="/">Tech_Annotation</a>
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item"><a class="nav-link" href="/trainerHome">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="/createCourse">Add
+								Course</a></li>
+						<li class="nav-item"><a class="nav-link" href="/addLesson">Add
+								Lesson</a></li>
+						<li class="nav-item ml-auto"><a class="nav-link"
+							href="/showCourses" role="button">Courses</a></li>
+					</ul>
+					<ul class="navbar-nav">
+						<li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+
 	<div class="d-grid gap-2 col-6 mx-auto">
-		<a class="btn btn-outline-primary" href="/createCourse" role="button">Add New
-			Course</a> <a class="btn btn-outline-primary" href="/addLesson" role="button">Add
-			New Lesson</a> <a class="btn btn-outline-primary" href="/showCourses" role="button">View
-			Courses</a>
+		<a class="btn btn-outline-dark" href="/createCourse" role="button">Add
+			New Course</a> <a class="btn btn-outline-dark" href="/addLesson"
+			role="button">Add New Lesson</a> <a class="btn btn-outline-dark"
+			href="/showCourses" role="button">View Courses</a>
 	</div>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

@@ -13,9 +13,9 @@ import com.learnSphere.repository.LessonRepository;
 @Service
 public class TrainerServiceImplementation implements TrainerService {
 	@Autowired
-	CourseRepository courseRepository;
+	private CourseRepository courseRepository;
 	@Autowired
-	LessonRepository lessonRepository;
+	private LessonRepository lessonRepository;
 
 	@Override
 	public String createCourse(int courseId, String courseName, int coursePrice) {

@@ -9,10 +9,10 @@ import com.learnSphere.entity.Lesson;
 import com.learnSphere.repository.LessonRepository;
 
 @Service
-public class StudentImplementation implements StudentService {
+public class StudentServiceImplementation implements StudentService {
 
 	@Autowired
-	LessonRepository lessonRepository;
+	private LessonRepository lessonRepository;
 
 	@Override
 	public Lesson getLesson(int lessonId) {
