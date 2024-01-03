@@ -38,11 +38,11 @@ public class TrainerController {
 		return "redirect:/addLesson";
 	}
 
-	@GetMapping("/showCourses")
+	@GetMapping("/courses")
 	public String showCourses(Model model) {
 		List<Course> courseList = trainerService.courseList();
 		model.addAttribute("courses", courseList);
 		System.out.println("course fetched successfully");
-		return "redirect:/courses";
+		return "courses";
 	}
 }

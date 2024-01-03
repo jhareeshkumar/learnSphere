@@ -39,12 +39,7 @@ public class NavController {
 	public String studentHome() {
 		return "studentHome";
 	}
-
-	@GetMapping("/courses")
-	public String courses() {
-		return "courses";
-	}
-
+	
 	@GetMapping("/myCourses")
 	public String myCourses() {
 		return "myCourses";
