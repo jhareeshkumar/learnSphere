@@ -6,12 +6,15 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.learnSphere.services.CommentsService;
 import com.learnSphere.services.UserService;
 
 @Controller
 public class ServiceController {
 	@Autowired
 	UserService userService;
+	@Autowired
+	CommentsService commentsService;
 
 	@PostMapping("/register")
 	public String addUser(@RequestParam String name, @RequestParam String email, @RequestParam String password,
@@ -34,8 +37,12 @@ public class ServiceController {
 		// TODO: process POST request
 		if (userService.checkEmail(email)) {
 			if (userService.valid(email, password)) {
-				return "home";
-			}else {
+				String userRole = userService.getUserRole(email);
+				if (userRole.equals("trainer"))
+					return "trainerHome";
+				else
+					return "studentHome";
+			} else {
 				model.addAttribute("loginErrorMessage", "Incorrect Credentials");
 				return "login";
 			}
@@ -43,5 +50,4 @@ public class ServiceController {
 		model.addAttribute("loginErrorMessage", "User not registered, Please register!.");
 		return "login";
 	}
-
 }

@@ -1,0 +1,88 @@
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Lesson Page</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+<style>
+body {
+	margin: 30px;
+}
+</style>
+</head>
+<body>
+
+
+	<div>
+		<h1 class="display-2">My Lesson Page!</h1>
+	</div>
+
+	<div class="card" style="width: 100%;">
+
+		<div class="card-body">
+			<h5 class="card-title">Course Info</h5>
+		</div>
+
+		<table class="table table-hover" th:if="${lesson != null}">
+
+			<tbody class="table-group-divider">
+				<tr>
+					<th scope="row">Course ID</th>
+					<td>:</td>
+					<td th:text="${lesson.course.courseId}"></td>
+				</tr>
+				<tr>
+					<th scope="row">Lesson ID</th>
+					<td>:</td>
+					<td th:text="${lesson.lessonId}"></td>
+				</tr>
+				<tr>
+					<th scope="row">Lesson Name</th>
+					<td>:</td>
+					<td th:text="${lesson.lessonName}"></td>
+				</tr>
+				<tr>
+					<th scope="row">Topics</th>
+					<td>:</td>
+					<td th:text="${lesson.topics}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="card-body" th:if="${lesson != null}">
+			<div class="ratio ratio-16x9">
+				<iframe th:src="${lesson.link}"
+					title="Java Class Aug + Sept + Oct + Nov + Dec Batch 2022 - 10/06/2023"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					allowfullscreen></iframe>
+			</div>
+		</div>
+
+		<form action="/addComment" class="row g-3 needs-validation" novalidate
+			method="post">
+			<div class="input-group mb-3">
+				<input type="text" class="form-control" name="comment"
+					placeholder="comment here" aria-label="Recipient's username"
+					aria-describedby="button-addon2" required="required">
+				<button class="btn btn-outline-secondary" type="submit"
+					id="button-addon2">Add Comment</button>
+			</div>
+		</form>
+
+		<ul class="list-group list-group-flush" th:if="${lesson != null}"
+			th:each="comment : ${commentsList}">
+			<li class="list-group-item" th:text="${comment.comment}"></li>
+		</ul>
+	</div>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+</html>

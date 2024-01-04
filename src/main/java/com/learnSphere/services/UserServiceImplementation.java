@@ -10,7 +10,7 @@ import com.learnSphere.repository.UserRepository;
 public class UserServiceImplementation implements UserService {
 
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
 
 	@Override
 	public String addUser(String name, String email, String password, String role) {

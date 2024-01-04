@@ -7,10 +7,10 @@ import jakarta.persistence.ManyToOne;
 @Entity
 public class Lesson {
 	@Id
-	int lessonId;
-	String lessonName;
-	String topics;
-	String link;
+	private int lessonId;
+	private String lessonName;
+	private String topics;
+	private String link;
 
 	@ManyToOne
 	Course course;
@@ -74,6 +74,4 @@ public class Lesson {
 		return "Lesson [lessonId=" + lessonId + ", lessonName=" + lessonName + ", topics=" + topics + ", link=" + link
 				+ ", course=" + course + "]";
 	}
-	
-	
 }
