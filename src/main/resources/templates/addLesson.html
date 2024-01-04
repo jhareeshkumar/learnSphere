@@ -41,70 +41,76 @@
 	</header>
 
 
+	<main>
 
+		<div class="container">
 
-	<div class="container">
+			<form class="needs-validation" action="/addLesson" novalidate
+				method="post">
+				<div>
+					<p th:text="${addLessonStatus}"></p>
+				</div>
+				<h1 class="display-1">Add Your Lesson Here!</h1>
+				<div class="row mb-3">
 
-		<form class="needs-validation" action="/addLesson" novalidate
-			method="post">
-			<div>
-				<p th:text="${addLessonStatus}"></p>
-			</div>
-			<h1 class="display-1">Add Your Lesson Here!</h1>
-			<div class="row mb-3">
+					<label for="courseId" class="col-sm-2 col-form-label">Course
+						ID</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control form-control-lg"
+							id="courseId" name="courseId" placeholder="Example:101" required>
+						<div class="invalid-feedback">Please enter CourseId</div>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label for="lessonId" class="col-sm-2 col-form-label">Lesson
+						ID</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control form-control-lg"
+							id="lessonId" name="lessonId" placeholder="Example:1001" required>
+						<div class="invalid-feedback">Please enter lesson ID</div>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label for="lessonName" class="col-sm-2 col-form-label">Lesson
+						Name</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control form-control-lg"
+							id="lessonName" name="lessonName" placeholder="Example:DataTypes"
+							required>
+						<div class="invalid-feedback">Please enter lesson Name</div>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label for="lessonTopics" class="col-sm-2 col-form-label">Lesson
+						Topics</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control form-control-lg"
+							id="lessonTopics" name="lessonTopics"
+							placeholder="Example:Typecasting" required>
+						<div class="invalid-feedback">Please enter lesson topics</div>
+					</div>
+				</div>
 
-				<label for="courseId" class="col-sm-2 col-form-label">Course
-					ID</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control form-control-lg"
-						id="courseId" name="courseId" placeholder="Example:101" required>
-					<div class="invalid-feedback">Please enter CourseId</div>
+				<div class="row mb-3">
+					<label for="link" class="col-sm-2 col-form-label">Lesson
+						Link</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control form-control-lg" id="link"
+							name="link"
+							placeholder="Example:https://www.youtube.com/embed/ERDvP0s7ask?si=p51zNmBHCU08pdeV"
+							required>
+						<div class="invalid-feedback">Please enter embed link only</div>
+					</div>
 				</div>
-			</div>
-			<div class="row mb-3">
-				<label for="lessonId" class="col-sm-2 col-form-label">Lesson
-					ID</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control form-control-lg"
-						id="lessonId" name="lessonId" placeholder="Example:1001" required>
-					<div class="invalid-feedback">Please enter lesson ID</div>
-				</div>
-			</div>
-			<div class="row mb-3">
-				<label for="lessonName" class="col-sm-2 col-form-label">Lesson
-					Name</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control form-control-lg"
-						id="lessonName" name="lessonName" placeholder="Example:DataTypes"
-						required>
-					<div class="invalid-feedback">Please enter lesson Name</div>
-				</div>
-			</div>
-			<div class="row mb-3">
-				<label for="lessonTopics" class="col-sm-2 col-form-label">Lesson
-					Topics</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control form-control-lg"
-						id="lessonTopics" name="lessonTopics"
-						placeholder="Example:Typecasting" required>
-					<div class="invalid-feedback">Please enter lesson topics</div>
-				</div>
-			</div>
-
-			<div class="row mb-3">
-				<label for="link" class="col-sm-2 col-form-label">Lesson
-					Link</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control form-control-lg" id="link"
-						name="link"
-						placeholder="Example:https://www.youtube.com/embed/ERDvP0s7ask?si=p51zNmBHCU08pdeV"
-						required>
-					<div class="invalid-feedback">Please enter embed link only</div>
-				</div>
-			</div>
-			<input class="btn btn-outline-dark" type="submit" value="Add Lesson">
-		</form>
-	</div>
+				<input class="btn btn-outline-dark" type="submit" value="Add Lesson">
+			</form>
+		</div>
+	</main>
+	
+	
+	
+	
+	
 	<footer class="footer bg-dark">
 		<div class="container">
 			<span class="text-secondary">Place sticky footer content here.</span>
