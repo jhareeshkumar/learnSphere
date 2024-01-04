@@ -43,18 +43,47 @@
 
 
 	<main class="container">
-		<div class="d-grid gap-2 col-6 mx-auto">
-			<a class="btn btn-outline-dark" href="/createCourse" role="button">Add
-				New Course</a> <a class="btn btn-outline-dark" href="/addLesson"
-				role="button">Add New Lesson</a> <a class="btn btn-outline-dark"
-				href="/courses" role="button">View Courses</a>
-		</div>
+
+		<section class="mt-4">
+			<h2>Welcome, [Trainer Name]!</h2>
+			<p>Here's a quick overview of your activities:</p>
+
+			<!-- Example: Recently Added Courses -->
+			<div class="card mt-3">
+				<div class="card-body">
+					<h3>Recently Added Courses</h3>
+					<ul>
+						<li>Course 1: Introduction to Web Development</li>
+						<li>Course 2: Data Science Fundamentals</li>
+						<li>Course 3: Graphic Design Basics</li>
+					</ul>
+				</div>
+			</div>
+			<div class="d-grid gap-2 col-6 mx-auto mt-2">
+				<a class="btn btn-outline-dark" href="/createCourse" role="button">Add
+					New Course</a> <a class="btn btn-outline-dark" href="/courses"
+					role="button">View Courses</a>
+			</div>
+			<!-- Example: Upcoming Lessons -->
+			<div class="card mt-3">
+				<div class="card-body">
+					<h3>Upcoming Lessons</h3>
+					<ul>
+						<li>Lesson 1: HTML Basics - Tomorrow at 10 AM</li>
+						<li>Lesson 2: Data Analysis Techniques - Next Monday at 2 PM</li>
+					</ul>
+				</div>
+			</div>
+			<div class="d-grid gap-2 col-6 mx-auto mt-2">
+				<a class="btn btn-outline-dark" href="/addLesson" role="button">Add
+					New Lesson</a>
+			</div>
+		</section>
 	</main>
 
-	<footer class="footer bg-dark mt-5 p-3">
+	<footer class="footer bg-dark">
 		<div class="container">
-			<span class="text text-white">Place sticky footer content
-				here.</span>
+			<span class="text-secondary">Place sticky footer content here.</span>
 		</div>
 	</footer>
 	<!--linking script files-->

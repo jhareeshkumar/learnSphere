@@ -7,10 +7,27 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
 </head>
 <body>
 
 
+	<!-- Begin page content -->
+	<main role="main" class="container">
+		<h1 class="mt-5">Sticky footer</h1>
+		<p class="lead">Pin a fixed-height footer to the bottom of the
+			viewport in desktop browsers with this custom HTML and CSS.</p>
+		<p>
+			Use <a href="../sticky-footer-navbar/">the sticky footer with a
+				fixed navbar</a> if need be, too.
+		</p>
+	</main>
+
+	 <footer class="footer bg-dark">
+      <div class="container">
+        <span class="text-secondary">Place sticky footer content here.</span>
+      </div>
+    </footer>
 
 	<!--linking script files-->
 	<script type="text/javascript" th:src="@{/js/script.js}"></script>
